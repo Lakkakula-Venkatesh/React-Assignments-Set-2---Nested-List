@@ -13,9 +13,9 @@ export default function State({ states }) {
   return (
     <>
       {states.map((item, index) => (
-        <div key={index} onClick={handleCity} id={`state${index + 1}`}>
+        <li key={index} onClick={handleCity} id={`state${index + 1}`}>
           {item.name}
-        </div>
+        </li>
       ))}
       <br />
       <br />
