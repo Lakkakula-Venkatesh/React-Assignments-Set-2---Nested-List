@@ -159,9 +159,6 @@ function App() {
   return (
     <>
       <div id="main"></div>
-      <br />
-      <br />
-      <em><b>State</b></em>
       <State states={states} />
     </>
   );

@@ -17,9 +17,6 @@ export default function State({ states }) {
           {item.name}
         </li>
       ))}
-      <br />
-      <br />
-      <em><b>City</b></em>
       {cityIndex !== -1 && <City index={townIndex} city={states[cityIndex]} />}
     </>
   );
