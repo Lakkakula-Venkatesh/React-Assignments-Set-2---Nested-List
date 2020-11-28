@@ -3,10 +3,12 @@ import City from "./CitiesComponent";
 
 export default function State({ states }) {
   const [cityIndex, setCityIndex] = React.useState(-1);
+  const [townIndex, setTownIndex] = React.useState(-1);
   const handleCity = (event) => {
     let index = event.target.id;
     index = index.charAt(index.length - 1) - 1;
     setCityIndex(index);
+    setTownIndex(-1);
   };
   return (
     <>
@@ -15,7 +17,10 @@ export default function State({ states }) {
           {item.name}
         </div>
       ))}
-      {cityIndex !== -1 && <City city={states[cityIndex]} />}
+      <br />
+      <br />
+      <em><b>City</b></em>
+      {cityIndex !== -1 && <City index={townIndex} city={states[cityIndex]} />}
     </>
   );
 }
