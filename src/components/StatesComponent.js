@@ -4,9 +4,14 @@ import City from "./CitiesComponent";
 export default function State({ states }) {
   const [cityIndex, setCityIndex] = React.useState(-1);
   const [townIndex, setTownIndex] = React.useState(-1);
+
   const handleCity = (event) => {
     let index = event.target.id;
     index = index.charAt(index.length - 1) - 1;
+    if(cityIndex === index) {
+      setCityIndex(-1);
+      return;
+    }
     setCityIndex(index);
     setTownIndex(-1);
   };
